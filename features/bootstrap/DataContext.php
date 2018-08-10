@@ -13,9 +13,8 @@
 
 namespace CCDNUser\SecurityBundle\features\bootstrap;
 
-use Behat\Behat\Context\BehatContext;
 use Behat\Gherkin\Node\TableNode;
-use Behat\Symfony2Extension\Context\KernelAwareInterface;
+use Behat\Symfony2Extension\Context\KernelAwareContext;
 use Symfony\Component\HttpKernel\KernelInterface;
 
 use CCDNUser\SecurityBundle\Tests\Functional\src\Entity\User;
@@ -34,7 +33,7 @@ use CCDNUser\SecurityBundle\Entity\Profile;
  * @link     https://github.com/codeconsortium/CCDNUserSecurityBundle
  *
  */
-class DataContext extends BehatContext implements KernelAwareInterface
+class DataContext implements KernelAwareContext
 {
     /**
      *

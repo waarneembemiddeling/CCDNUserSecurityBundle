@@ -5,13 +5,13 @@ rm -rRf ./Tests/Functional/app/logs/*
 
 rm -f ./Tests/Functional/app/config/parameters.yml
 echo 'parameters:
-    database_driver:   pdo_mysql
-    database_host:     127.0.0.1
-    database_port:     null
-    database_name:     ccdn_test
-    database_user:     ccdnroot
+    database_driver: pdo_mysql
+    database_host: mysql
+    database_port: null
+    database_name: ccdn_test
+    database_user: ccdnroot
     database_password: root
-    locale:            en
+    locale: en
 
 ' > ./Tests/Functional/app/config/parameters.yml
 

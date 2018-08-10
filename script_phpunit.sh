@@ -6,7 +6,7 @@ rm -rRf ./Tests/Functional/app/logs/*
 rm -f ./Tests/Functional/app/config/parameters.yml
 echo 'parameters:
     database_driver: pdo_mysql
-    database_host: 127.0.0.1
+    database_host: mysql
     database_port: null
     database_name: ccdn_test
     database_user: ccdnroot
@@ -22,4 +22,4 @@ php ./Tests/Functional/app/console --env=test doctrine:database:create
 php ./Tests/Functional/app/console --env=test doctrine:schema:create
 php ./Tests/Functional/app/console --env=test doctrine:schema:update --force
 
-./vendor/phpunit/phpunit/phpunit.php -c ./ --testdox
+./vendor/bin/phpunit -c ./ --testdox
